@@ -5,7 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import $ from 'jquery';
 import Popper from 'popper.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+
 
 ReactDOM.render(
   <React.StrictMode>

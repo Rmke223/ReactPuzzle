@@ -65,24 +65,25 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container text-center bg-success">
         <div className="row d-flex text-center">
-          <h1 className="col-12">Sliding Puzzle</h1>
+          <h1 className="col-12 text-white">Sliding Puzzle</h1>
           {
             this.state.Tiles.map((item, i) =>
               <div
                 key={i}
                 id={i}
-                className="col-3 border d-flex"
-                onClick={() => this.isClicked(item)}>
+                className="col-3 border d-flex text-primary bg-danger"
+                onClick={() => this.isClicked(item)}
+                style={{height: 100}}>
                 {item.value}
               </div>
             )
           }
         </div>
-        <p>Moves: {this.state.Clicks}</p>
+        <p className="text-white">Moves: {this.state.Clicks}</p>
         <button className="btn btn-primary" onClick={() => this.shuffle()}>Start!</button>
-        <button className="btn btn-primary" onClick={() => this.reset()}>Start!</button>
+        <button className="btn btn-primary" onClick={() => this.reset()}>Reset</button>
       </div>
     )
   }
